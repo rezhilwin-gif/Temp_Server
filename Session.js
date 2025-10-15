@@ -6,10 +6,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use(cors({
-    origin: '*',
-    credentials: true,
-}));
+app.use(cors());
 
 app.use(session({
     secret: 'secret123',
@@ -48,4 +45,5 @@ app.post('/logout', (req, res) => {
 });
 
 app.listen(5000, () => console.log('✅ Server running on http://localhost:5000'));
+
 
