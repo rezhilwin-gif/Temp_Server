@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: '*',
     credentials: true,
 }));
 
@@ -48,3 +48,4 @@ app.post('/logout', (req, res) => {
 });
 
 app.listen(5000, () => console.log('✅ Server running on http://localhost:5000'));
+
